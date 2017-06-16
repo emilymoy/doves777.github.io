@@ -12,18 +12,18 @@ title: Matchup Guide
       google.setOnLoadCallback(drawChart);
       function drawChart() {
     	  var data = google.visualization.arrayToDataTable([
-			['Department', 'link', 'Money'],
-			['Faculty',  'Faculty',   16954767.96],
-			['Exempt',   'Exempt',  11101641.44],
-			['NonExempt', 'NonExempt',  3083227.11],
-			['Graduate Assistants', 'Grad', 3216848.57],
+			['Deck', 'link', 'Percentage'],
+			['Abzan',  'abzan',  143 ],
+			['Grixis Death Shadow',   'exempt',  88],
+			['B/W Control', 'bwcontrol',  63],
+			['Affinity', 'affinity', 25],
 			]);
 
         var view = new google.visualization.DataView(data);
         view.setColumns([0, 2]);
 
         var options = {
-          title: 'Payroll by Catergory for PP 2017:23'
+          title: 'Meta Snapshot'
         };
 
         var chart = new google.visualization.PieChart( 
