@@ -1,12 +1,46 @@
 ---
 layout: default
-title: About Andrew
+title: Matchup Guide
 ---
 
 <h1>{{ page.title }}</h1>
 
+<head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+    	  var data = google.visualization.arrayToDataTable([
+			['Department', 'link', 'Money'],
+			['Faculty',  'Faculty',   16954767.96],
+			['Exempt',   'Exempt',  11101641.44],
+			['NonExempt', 'NonExempt',  3083227.11],
+			['Graduate Assistants', 'Grad', 3216848.57],
+			]);
+
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 2]);
+
+        var options = {
+          title: 'Payroll by Catergory for PP 2017:23'
+        };
+
+        var chart = new google.visualization.PieChart( 
+          document.getElementById('chart_div'));
+        chart.draw(view, options);
+
+        var selectHandler = function(e) {
+         window.location = data.getValue(chart.getSelection()[0]['row'], 1 );
+        }
+
+        google.visualization.events.addListener(chart, 'select', selectHandler);
+      }
+    </script>
+</head>
+
+
 <div class="blurb">
-  <b>HI, MY NAME IS ANDREW HUNG</b>
-<hr width=100%  align=right> 
-<br><br>
+<div id="chart_div" style="width: 900px; height: 900px;"></div> 
+    
 </div><!-- /.blurb -->
