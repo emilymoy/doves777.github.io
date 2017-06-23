@@ -44,7 +44,7 @@ ul.posts li {
 content {
     position: relative;
 }
-scontent img {
+content img {
     position: absolute;
     top: 0px;
     right: 0px;
