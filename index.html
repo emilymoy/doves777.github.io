@@ -269,17 +269,6 @@ a.nav-link:active
   </div>
 </div>
 
-<script type="text/javascript">
-$(function() {
-  $('form').submit(function(){
-    $.post('http://example.com/upload', function() {
-      window.location = 'http://google.com';
-    });
-    return false;
-  });
-});
-</script>
-
 <!--
 	<script>
 	var sendButton = document.getElementById("js_send");
@@ -354,6 +343,8 @@ function toggleFunction() {
 }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsYWSITZJ04cUfZrblL-mbyuyQ8l83fVs&callback=myMap"></script>
+<script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 
 
 </body>
