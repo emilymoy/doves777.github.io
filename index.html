@@ -303,7 +303,7 @@ a.nav-link:active
             }
         };
 
-        var subject = document.querySelector("#" + form_id_js + " [name='Name']").value;
+        var subject = (document.querySelector("#" + form_id_js + " [name='Name']").value);
         var message = (document.querySelector("#" + form_id_js + " [name='Email']").value) + (document.querySelector("#" + form_id_js + " [name='Message']").value);
         data_js['subject'] = subject;
         data_js['text'] = message;
