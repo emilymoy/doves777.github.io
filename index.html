@@ -272,16 +272,11 @@ a.nav-link:active
   action="https://script.google.com/macros/s/AKfycbx4NU7nHHTCnZ8Ygud2ZyAK0i8XQ4eXumSpXDyIanxTpl3DGyo/exec">
     <!-- change the form action to your script url -->
 
-    <fieldset class="pure-group">
-      <label for="name">Name: </label>
-      <input id="name" name="name" placeholder="What your Mom calls you" />
-    </fieldset>
+   <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+   <div class="w3-half">
+   	<input id="name" class="w3-input w3-border" name="name" placeholder="Name" type="text" required />
+   </div>
 
-    <fieldset class="pure-group">
-      <label for="message">Message: </label>
-      <textarea id="message" name="message" rows="10"
-      placeholder="Tell us what's on your mind..."></textarea>
-    </fieldset>
 
     <fieldset class="pure-group">
       <label for="email"><em>Your</em> Email Address:</label>
@@ -289,6 +284,14 @@ a.nav-link:active
       required placeholder="your.name@email.com"/>
       <span id="email-invalid" style="display:none">
         Must be a valid email address</span>
+    </fieldset>
+	  </div>
+   
+    
+    <fieldset class="pure-group">
+      <label for="message">Message: </label>
+      <textarea id="message" name="message" rows="10"
+      placeholder="Tell us what's on your mind..."></textarea>
     </fieldset>
 
     <button class="button-success pure-button button-xlarge">
